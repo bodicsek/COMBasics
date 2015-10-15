@@ -11,20 +11,15 @@ ComponentClassFactory::ComponentClassFactory()
   ++g_objCount;
 }
 
-
 ComponentClassFactory::~ComponentClassFactory()
 {
   --g_objCount;
 }
 
-
-
 ULONG __stdcall ComponentClassFactory::AddRef()
 {
   return ++m_refCount;
 }
-
-
 
 ULONG __stdcall ComponentClassFactory::Release()
 {
@@ -36,18 +31,17 @@ ULONG __stdcall ComponentClassFactory::Release()
   return m_refCount;
 }
 
-
-
 HRESULT __stdcall ComponentClassFactory::QueryInterface(REFIID riid, void ** ppAny)
 {
   // IID_IUnknown is the REFIID of standard interface IUnknown
   if (riid == IID_IUnknown)
   {
-    *ppAny = (IUnknown *)this;
+    *ppAny = (IUnknown*)this;
   }
+  // IID_IUnknown is the REFIID of standard interface IClassFactory
   else if (riid == IID_IClassFactory)
   {
-    *ppAny = (IClassFactory *)this;
+    *ppAny = (IClassFactory*)this;
   }
   else
   {
@@ -59,8 +53,6 @@ HRESULT __stdcall ComponentClassFactory::QueryInterface(REFIID riid, void ** ppA
 
   return S_OK;
 }
-
-
 
 HRESULT __stdcall ComponentClassFactory::CreateInstance(LPUNKNOWN pUnkOuter, REFIID riid, void ** ppAny)
 {
@@ -80,8 +72,6 @@ HRESULT __stdcall ComponentClassFactory::CreateInstance(LPUNKNOWN pUnkOuter, REF
 
   return hr;
 }
-
-
 
 HRESULT __stdcall ComponentClassFactory::LockServer(BOOL fLock)
 {

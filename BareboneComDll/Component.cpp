@@ -2,15 +2,14 @@
 #include "Component.h"
 #include "Iid.h"
 
-extern ULONG g_lockCount;
-extern ULONG g_objCount;
+extern ULONG g_lockCount; //global COM locks on the DLL
+extern ULONG g_objCount;  //number of objects created by the DLL
 
 Component::Component()
 {
   m_refCount = 0;
   ++g_objCount;
 }
-
 
 Component::~Component()
 {
@@ -40,12 +39,12 @@ STDMETHODIMP Component::QueryInterface(REFIID riid, void ** ppAny)
   // IID_IUnknown is the REFIID of standard interface IUnknown
   if (riid == IID_IUnknown)
   {
-    // to avoid confusion caused by virtual inheritance
-    *ppAny = (IUnknown *)(IKnowledgeBase *)this;
+    *ppAny = (IUnknown*)this;
   }
+  // IID_IKnowledgeBase is the REFIID of our interface defined in Iid.h
   else if (riid == IID_IKnowledgeBase)
   {
-    *ppAny = (IKnowledgeBase *)this;
+    *ppAny = (IKnowledgeBase*)this;
   }
   else
   {
@@ -53,6 +52,7 @@ STDMETHODIMP Component::QueryInterface(REFIID riid, void ** ppAny)
     return E_NOINTERFACE;
   }
 
+  //Default reference increment
   ((IUnknown *)(*ppAny))->AddRef();
 
   return S_OK;

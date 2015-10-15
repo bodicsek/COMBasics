@@ -19,35 +19,35 @@ using namespace ATL;
 // Component1
 
 class ATL_NO_VTABLE Component1 :
-	public CComObjectRootEx<CComSingleThreadModel>,
-	public CComCoClass<Component1, &CLSID_Component1>,
-	public IKnowledgeBase
+  public CComObjectRootEx<CComSingleThreadModel>,
+  public CComCoClass<Component1, &CLSID_Component1>,
+  public IKnowledgeBase
 {
 public:
-	Component1()
-	{
-	}
+  Component1()
+  {
+  }
 
-DECLARE_REGISTRY_RESOURCEID(IDR_COMPONENT1)
+  DECLARE_REGISTRY_RESOURCEID(IDR_COMPONENT1)
 
-DECLARE_NOT_AGGREGATABLE(Component1)
+  DECLARE_NOT_AGGREGATABLE(Component1)
 
-BEGIN_COM_MAP(Component1)
-	COM_INTERFACE_ENTRY(IKnowledgeBase)
-END_COM_MAP()
+  BEGIN_COM_MAP(Component1)
+    COM_INTERFACE_ENTRY(IKnowledgeBase)
+  END_COM_MAP()
 
 
 
-	DECLARE_PROTECT_FINAL_CONSTRUCT()
+  DECLARE_PROTECT_FINAL_CONSTRUCT()
 
-	HRESULT FinalConstruct()
-	{
-		return S_OK;
-	}
+  HRESULT FinalConstruct()
+  {
+    return S_OK;
+  }
 
-	void FinalRelease()
-	{
-	}
+  void FinalRelease()
+  {
+  }
 
 public:
   HRESULT STDMETHODCALLTYPE Answer(

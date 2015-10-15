@@ -1,0 +1,12 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+  object,
+  uuid(D427CA52-AF28-40a4-A5C2-97EA029DCD0F),
+  pointer_default(unique)
+]
+interface IKnowledgeBase : IUnknown
+{
+  HRESULT Answer([out] BYTE* pbResult);
+};
