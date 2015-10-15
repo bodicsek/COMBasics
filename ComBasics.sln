@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BareboneComDll", "BareboneComDll\BareboneComDll.vcxproj", "{A3B4750C-4791-4394-9B12-4405A47340F9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcxproj", "{7E62362E-7559-4986-889D-DEA3098420B2}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtlComDll", "AtlComDll\AtlComDll.vcxproj", "{81EA3F88-4D88-451F-B5D2-582539A2DDA4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetComDll", "DotNetComDll\DotNetComDll.csproj", "{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,18 +49,6 @@ Global
 		{81EA3F88-4D88-451F-B5D2-582539A2DDA4}.Release|x64.Build.0 = Release|x64
 		{81EA3F88-4D88-451F-B5D2-582539A2DDA4}.Release|x86.ActiveCfg = Release|Win32
 		{81EA3F88-4D88-451F-B5D2-582539A2DDA4}.Release|x86.Build.0 = Release|Win32
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Debug|x64.Build.0 = Debug|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Debug|x86.Build.0 = Debug|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Release|x64.ActiveCfg = Release|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Release|x64.Build.0 = Release|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Release|x86.ActiveCfg = Release|Any CPU
-		{BC80D5EE-7347-4E93-9755-0F8F4F2A5373}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
