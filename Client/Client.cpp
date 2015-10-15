@@ -39,7 +39,7 @@ int main()
     return 3;
   }
 
-  std::cout << "THe ultimate answer is: " << theAnswer << std::endl;
+  std::cout << "The ultimate answer is: " << theAnswer << std::endl;
 
   CoUninitialize();
 
