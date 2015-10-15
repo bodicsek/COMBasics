@@ -14,7 +14,7 @@ int main()
   CoInitialize(NULL);
 
   IClassFactory* pClassFactory = NULL;
-  HRESULT hr = CoGetClassObject(CLSID_Component1, CLSCTX_SERVER, NULL, IID_IClassFactory, (void**)&pClassFactory);
+  HRESULT hr = CoGetClassObject(CLSID_Component, CLSCTX_SERVER, NULL, IID_IClassFactory, (void**)&pClassFactory);
   if (FAILED(hr))
   {
     std::cout << "CoGetClassObject failed!" << std::endl;
@@ -39,7 +39,7 @@ int main()
     return 3;
   }
 
-  std::cout << "The ultimate answer is: " << theAnswer << std::endl;
+  std::cout << "The ultimate answer is: " << (int)theAnswer << std::endl;
 
   CoUninitialize();
 
